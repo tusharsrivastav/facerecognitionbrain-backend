@@ -30,16 +30,16 @@ import image from "./controllers/image.js";
 const db = knex({
   client: "pg",
   connection: {
-    host: process.env.PGHOST,
-    user: process.env.PGUSER,
-    port: process.env.PGPORT,
-    password: process.env.PGPASSWORD,
-    database: process.env.PGDATABASE,
+    host: process.env.HOST,
+    user: process.env.USER,
+    port: process.env.PORT,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
   },
 });
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // MIDDLEWARES
 app.use(bodyParser.json());

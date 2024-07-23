@@ -26,6 +26,7 @@ import image from "./controllers/image.js";
 //   },
 // });
 
+// PRODUCTION CODE
 const db = knex({
   client: "pg",
   connection: {
@@ -38,7 +39,7 @@ const db = knex({
 });
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 // MIDDLEWARES
 app.use(bodyParser.json());
